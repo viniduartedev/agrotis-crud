@@ -1,0 +1,27 @@
+***** Scripts para geracao de tabela
+
+CREATE TABLE Propriedade (
+    id BIGINT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE Laboratorio (
+    id BIGINT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE Cadastro (
+    id BIGINT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    dataInicial DATETIME2 NOT NULL,
+    dataFinal DATETIME2 NOT NULL,
+    observacoes VARCHAR(100),
+
+    propriedade_id BIGINT,
+    laboratorio_id BIGINT,
+
+    CONSTRAINT FK_Cadastro_Propriedade FOREIGN KEY (propriedade_id) REFERENCES Propriedade(id),
+    CONSTRAINT FK_Cadastro_Laboratorio FOREIGN KEY (laboratorio_id) REFERENCES Laboratorio(id)
+);

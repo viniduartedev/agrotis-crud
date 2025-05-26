@@ -1,0 +1,19 @@
+********** spript para alimentar as tabelas propriedade e laboratorio
+
+INSERT INTO Propriedade (nome) VALUES
+('None'),
+('Fazenda Modelo 1'),
+('Fazenda Modelo 2'),
+('Fazenda Modelo 3'),
+('Fazenda Modelo 4'),
+('Fazenda Modelo 5'),
+('Fazenda Modelo 6');
+
+INSERT INTO Laboratorio (nome) VALUES
+('None'),
+('Laboratório Modelo 1'),
+('Laboratório Modelo 2'),
+('Laboratório Modelo 3'),
+('Laboratório Modelo 4'),
+('Laboratório Modelo 5'),
+('Laboratório Modelo 6');
